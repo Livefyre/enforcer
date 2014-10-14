@@ -7,11 +7,11 @@ Script Example:
 
 ## Make a list of files you want. ##
 ```
-enforce andrewguy9$ echo -e "a\nb\nc" > /tmp/goal_files
+echo -e "a\nb\nc" > /tmp/goal_files
 ```
 
 ```
-enforce andrewguy9$ cat /tmp/goal_files
+cat /tmp/goal_files
 a
 b
 c
@@ -29,7 +29,7 @@ ls
 
 ## Now run the enforcer. It will remove the files you didn't want, and create the ones you wanted. ##
 ```
-enforce andrewguy9$ enforce --current ls --goal cat /tmp/goal --remove rm '${KEY}' --add touch '${KEY}'
+enforce --current ls --goal cat /tmp/goal --remove rm '${KEY}' --add touch '${KEY}'
 Not converged
 ```
 
@@ -40,7 +40,7 @@ a    b    c
 
 ## On subsequent run, it returns converged to tell you that no work was required. ##
 ```
-enforce andrewguy9$ enforce --current ls --goal cat /tmp/goal --remove rm '${KEY}' --add touch '${KEY}'
+enforce --current ls --goal cat /tmp/goal --remove rm '${KEY}' --add touch '${KEY}'
 Converged
 ```
 
