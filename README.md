@@ -19,7 +19,7 @@ c
 
 Make a bunch of files you don't want.
 ```
-enforce andrewguy9$ touch 1 2 3
+touch 1 2 3
 ```
 
 ```
