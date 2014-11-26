@@ -23,7 +23,6 @@ def state_runner_factory(command):
     else:
       lines = command_output.split("\n")
       d = dict.fromkeys(lines)
-      print d
       return d
   return state_runner
 
