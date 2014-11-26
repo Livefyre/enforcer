@@ -29,7 +29,7 @@ ls
 
 Now run the enforcer. It will remove the files you didn't want, and create the ones you wanted.
 ```
-enforce --current ls --goal cat /tmp/goal --remove rm '${NAME}' --add touch '${NAME}'
+enforce --current ls --goal cat /tmp/goal_files --remove rm '${NAME}' --add touch '${NAME}'
 Not converged
 ```
 
@@ -40,7 +40,7 @@ a    b    c
 
 On subsequent run, it returns converged to tell you that no work was required.
 ```
-enforce --current ls --goal cat /tmp/goal --remove rm '${NAME}' --add touch '${NAME}'
+enforce --current ls --goal cat /tmp/goal_files --remove rm '${NAME}' --add touch '${NAME}'
 Converged
 ```
 
