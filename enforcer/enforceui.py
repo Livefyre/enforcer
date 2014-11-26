@@ -22,14 +22,16 @@ def state_runner_factory(command):
       exit(1) #TODO MAKE REPEAT SAFE
     else:
       lines = command_output.split("\n")
-      return lines
+      d = dict.fromkeys(lines)
+      print d
+      return d
   return state_runner
 
 """Create a function which takes a key and runs a shell command"""
 def state_changer_factory(command_template):
   """Run command specified by command_template and key. Throws on failure"""
-  def changer(key):
-    replace = {'KEY' : key}
+  def changer(key, context):
+    replace = {'NAME' : key}
     command = [Template(x).safe_substitute(replace) for x in command_template]
     ret_code = call(command)
     if ret_code != 0:
